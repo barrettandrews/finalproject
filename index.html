@@ -4,37 +4,71 @@
     <meta charset="UTF-8">
     <title>Blog Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS for styling -->
 </head>
 <body>
+    <!-- Master Page Layout -->
     <header>
-        <h1>Blog Platform</h1>
+        <h1>Welcome to the Blog Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#viewUsers">View Users</a></li>
+                <li><a href="#addUser">Add User</a></li>
+                <li><a href="#editUser">Edit User</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Form to create a new blog post -->
-    <section>
-        <h2>Create a New Post</h2>
-        <form id="postForm">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
+    <main>
+        <!-- Section for viewing all users -->
+        <section id="viewUsers">
+            <h2>All Users</h2>
+            <div id="userList"></div> <!-- Container to display users -->
+        </section>
 
-            <label for="content">Content:</label>
-            <textarea id="content" name="content" required></textarea>
+        <!-- Form for adding a new user -->
+        <section id="addUser">
+            <h2>Add New User</h2>
+            <form id="addUserForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-            <label for="author">Author ID:</label>
-            <input type="number" id="author_id" name="author_id" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <button type="submit">Create Post</button>
-        </form>
-    </section>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-    <!-- Section to display all blog posts -->
-    <section id="posts">
-        <h2>All Blog Posts</h2>
-        <div id="postList"></div>
-    </section>
+                <button type="submit">Add User</button>
+            </form>
+        </section>
 
-    <!-- Link to JavaScript file -->
-    <script src="js/scripts.js"></script>
+        <!-- Form for editing an existing user -->
+        <section id="editUser">
+            <h2>Edit User</h2>
+            <form id="editUserForm">
+                <label for="userId">User ID:</label>
+                <input type="number" id="userId" name="userId" required> <!-- ID of user to be edited -->
+
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" name="newUsername">
+
+                <label for="newEmail">New Email:</label>
+                <input type="email" id="newEmail" name="newEmail">
+
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword">
+
+                <button type="submit">Edit User</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog Platform. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="js/scripts.js"></script> <!-- JavaScript for handling form submissions -->
 </body>
 </html>
