@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Blog Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css"> <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Ensure correct CSS path -->
 </head>
 <body>
     <!-- Master Page Layout -->
@@ -12,54 +12,33 @@
         <h1>Welcome to the Blog Platform</h1>
         <nav>
             <ul>
-                <li><a href="#viewUsers">View Users</a></li>
-                <li><a href="#addUser">Add User</a></li>
-                <li><a href="#editUser">Edit User</a></li>
+                <li><a href="#viewPosts">View Posts</a></li>
+                <li><a href="#createPost">Create Post</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Section for viewing all users -->
-        <section id="viewUsers">
-            <h2>All Users</h2>
-            <div id="userList"></div> <!-- Container to display users -->
+        <!-- Section for viewing all blog posts -->
+        <section id="viewPosts">
+            <h2>Blog Posts</h2>
+            <div id="postList"></div> <!-- Placeholder for displaying posts -->
         </section>
 
-        <!-- Form for adding a new user -->
-        <section id="addUser">
-            <h2>Add New User</h2>
-            <form id="addUserForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+        <!-- Form for creating a new blog post -->
+        <section id="createPost">
+            <h2>Create New Post</h2>
+            <form id="postForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" required></textarea>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="author_id">Author ID:</label>
+                <input type="number" id="author_id" name="author_id" required>
 
-                <button type="submit">Add User</button>
-            </form>
-        </section>
-
-        <!-- Form for editing an existing user -->
-        <section id="editUser">
-            <h2>Edit User</h2>
-            <form id="editUserForm">
-                <label for="userId">User ID:</label>
-                <input type="number" id="userId" name="userId" required> <!-- ID of user to be edited -->
-
-                <label for="newUsername">New Username:</label>
-                <input type="text" id="newUsername" name="newUsername">
-
-                <label for="newEmail">New Email:</label>
-                <input type="email" id="newEmail" name="newEmail">
-
-                <label for="newPassword">New Password:</label>
-                <input type="password" id="newPassword" name="newPassword">
-
-                <button type="submit">Edit User</button>
+                <button type="submit">Create Post</button>
             </form>
         </section>
     </main>
@@ -69,6 +48,6 @@
     </footer>
 
     <!-- Link to external JavaScript file -->
-    <script src="js/scripts.js"></script> <!-- JavaScript for handling form submissions -->
+    <script src="/js/scripts.js"></script> <!-- Ensure correct JavaScript path -->
 </body>
 </html>
